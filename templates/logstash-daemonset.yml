@@ -1,23 +1,23 @@
 apiVersion: apps/v1beta2
 kind: DaemonSet
 metadata:
-  name: sre-logstash
+  name: sre-elk-logstash
   labels:
-    k8s-app: sre-logstash
+    k8s-app: sre-elk-logstash
 spec:
   selector:
     matchLabels:
-      name: sre-logstash
+      name: sre-elk-logstash
   template:
     metadata:
       labels:
-        name: sre-logstash
+        name: sre-elk-logstash
     spec:
       tolerations:
       - key: node-role.kubernetes.io/master
         effect: NoSchedule
       containers:
-      - name: sre-logstash
+      - name: sre-elk-logstash
         image: 870594606895.dkr.ecr.eu-west-2.amazonaws.com/sre-logstash
         volumeMounts:
         - name: varlog

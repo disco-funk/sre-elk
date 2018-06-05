@@ -3,14 +3,14 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    name: sre-kibana
-  name: sre-kibana
+    name: sre-elk-kibana
+  name: sre-elk-kibana
 spec:
   ports:
   - name: "5601"
     port: 5601
     targetPort: 5601
   selector:
-    name: sre-kibana
+    name: sre-elk-kibana
   type: LoadBalancer
 ---

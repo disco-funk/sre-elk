@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: sre-kibana
+  name: sre-elk-kibana
 spec:
   replicas: 1
   strategy:
@@ -11,11 +11,11 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        name: sre-kibana
+        name: sre-elk-kibana
     spec:
       containers:
       - image: 870594606895.dkr.ecr.eu-west-2.amazonaws.com/sre-kibana
-        name: sre-kibana
+        name: sre-elk-kibana
         ports:
         - containerPort: 5601
         resources: {}

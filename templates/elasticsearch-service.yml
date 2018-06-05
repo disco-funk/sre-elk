@@ -3,13 +3,13 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    name: sre-elasticsearch
-  name: sre-elasticsearch
+    name: sre-elk-elasticsearch
+  name: sre-elk-elasticsearch
 spec:
   ports:
   - name: "9200"
     port: 9200
     targetPort: 9200
   selector:
-    name: sre-elasticsearch
+    name: sre-elk-elasticsearch
 ---

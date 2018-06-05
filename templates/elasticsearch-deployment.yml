@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: sre-elasticsearch
+  name: sre-elk-elasticsearch
 spec:
   replicas: 1
   strategy: {}
@@ -10,14 +10,14 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        name: sre-elasticsearch
+        name: sre-elk-elasticsearch
     spec:
       containers:
       - env:
         - name: ES_JAVA_OPTS
           value: -Xmx256m -Xms256m
         image: 870594606895.dkr.ecr.eu-west-2.amazonaws.com/sre-elasticsearch
-        name: sre-elasticsearch
+        name: sre-elk-elasticsearch
         ports:
         - containerPort: 9200
         resources: {}
