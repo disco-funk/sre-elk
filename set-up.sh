@@ -2,7 +2,7 @@
 
 work=$(dirname $0)
 kubectl create -f ${work}/templates/elasticsearch-deployment.yml
-kubectl create -f ${work}/templates/elasticsearch-service.yml
 kubectl create -f ${work}/templates/kibana-deployment.yml
+kubectl create -f ${work}/templates/elasticsearch-service.yml
 kubectl create -f ${work}/templates/kibana-service.yml
 kubectl create -f ${work}/templates/logstash-daemonset.yml
