@@ -1,6 +1,7 @@
 
 http.host: 0.0.0.0
+path.config: /usr/share/logstash/config/logstash.conf
 #xpack.monitoring.elasticsearch.url: http://host.docker.internal:9200
-xpack.monitoring.elasticsearch.url: http://elasticsearch.default.svc.cluster.local:9200
+xpack.monitoring.elasticsearch.url: http://sre-elk-elasticsearch.default.svc.cluster.local:9200
 xpack.monitoring.elasticsearch.username: logstash_system
 xpack.monitoring.elasticsearch.password: changeme

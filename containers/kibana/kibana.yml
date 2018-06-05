@@ -2,7 +2,7 @@
 server.port: 5601
 server.host: 0.0.0.0
 #elasticsearch.url: http://host.docker.internal:9200
-elasticsearch.url: http://elasticsearch.default.svc.cluster.local:9200
+elasticsearch.url: http://sre-elk-elasticsearch.default.svc.cluster.local:9200
 #xpack.security.enabled: false
 #xpack.monitoring.enabled: false
 #xpack.graph.enabled: false
