@@ -27,7 +27,7 @@ spec:
           readOnly: true
       terminationGracePeriodSeconds: 30
       nodeSelector:
-        role: node
+        kubernetes.io/role: node
       volumes:
       - name: varlog
         hostPath:
