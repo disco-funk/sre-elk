@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 
-#kubectl delete deployment kibana
-#kubectl delete deployment elasticsearch
-#kubectl delete deployment logstash-elasticsearch
-#
-#kubectl delete service kibana
-#kubectl delete service elasticsearch
-#kubectl delete service logstash-elasticsearch
+kubectl delete deployment sre-kibana
+kubectl delete deployment sre-elasticsearch
+# kubectl delete deployment sre-logstash
 
-kibanaPod=$(kubectl get pods | egrep kibana | cut -d ' ' -f 1)
-kubectl delete pods ${kibanaPod}
-elasticsearchPod=$(kubectl get pods | egrep ^elasticsearch | cut -d ' ' -f 1)
-kubectl delete pods ${elasticsearchPod}
+kubectl delete service sre-kibana
+kubectl delete service sre-elasticsearch
+kubectl delete service sre-logstash
+
+kubectl delete ds sre-logstash
+
+kubectl delete pods $(kubectl get pods | egrep sre-kibana | cut -d ' ' -f 1)
+kubectl delete pods $(kubectl get pods | egrep sre-elasticsearch | cut -d ' ' -f 1)
+for lsPod in $(kubectl get pods | egrep sre-logstash | cut -d ' ' -f 1)
+do kubectl delete pods ${lsPod}
+done
