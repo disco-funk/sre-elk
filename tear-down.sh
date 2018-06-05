@@ -6,7 +6,7 @@ kubectl delete deployment sre-elasticsearch
 
 kubectl delete service sre-kibana
 kubectl delete service sre-elasticsearch
-kubectl delete service sre-logstash
+#kubectl delete service sre-logstash
 
 kubectl delete ds sre-logstash
 
