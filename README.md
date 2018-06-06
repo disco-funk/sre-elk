@@ -1,15 +1,40 @@
 
 # SRE ELK
-This is ...
+This project packages the logging components for the camp training project.
+
+## What is
+This project packages Elastic Search, Log Stash and Kibana as Docker images for Kubernetes deployment managed by Helm Charts for the Site Reliability-Engineering project.
 
 ## How to
-This ...
+Quick start: this is how to set up and tear down the logging components.  From the folder above the one containing this read-me, to set up,
 
-### Docker
-This is ...
+    helm install sre-elk
 
-    cd .../sre-elk
-    rebuild-containers
+Then, from a browser,
+
+    http://...aws.amazon.com:5601
+
+To tear down, we need to know the release name,
+    
+    helm list
+    
+then,
+
+    helm delete <release name>
+
+### Building the images
+From the folder containing this read-me,
+
+    scripts/build-images-and-push.sh
+
+The resulting images can also be used directly with Kubernetes.
+
+    scripts/set-up.sh
+    scripts/tear-down.sh
+
+The Docker images can be exercised locally.
+
+    scripts/rebuild-containers.sh
 
 In three shells,
 
@@ -17,35 +42,11 @@ In three shells,
     docker run --rm --name ls ls
     docker run --rm --name ki -p 127.0.0.1:5601:5601 ki
 
-From a browser
-
-    http://localhost:5601
-
-### Kubernetes
-This is ...
-
-    kubectl get ds
-    kubectl get pods
-    kubectl get service
-    kubectl get deployment
-
-Deploying
-
-    kubectl create -f templates/elasticsearch-deployment.yml
-    kubectl create -f templates/elasticsearch-service.yml
-    kubectl create -f templates/kibana-deployment.yml
-    kubectl create -f templates/kibana-service.yml
-    kubectl create -f templates/logstash.yml
-
-Useful
+Some other useful commands
 
     kubectl logs <podname>
     kubectl exec -it <podname> <command>
     kubectl describe service <servicename>
-
-Er ...
-
-    kubectl delete deployment kibana
-    kubectl delete service kibana
+    while true; do clear; kubectl get deployment,service,ds,pods; sleep 15; done
 
 ---
