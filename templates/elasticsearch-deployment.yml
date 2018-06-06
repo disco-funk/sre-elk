@@ -5,7 +5,8 @@ metadata:
   name: sre-elk-elasticsearch
 spec:
   replicas: 1
-  strategy: {}
+  strategy:
+    type: Recreate
   template:
     metadata:
       creationTimestamp: null
