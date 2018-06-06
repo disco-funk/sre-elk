@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   name: sre-elk-kibana
 spec:
-  replicas: {{.Values.replicaCount}}
+  replicas: 1
   strategy:
     type: Recreate
   template:

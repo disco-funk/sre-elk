@@ -1,7 +1,7 @@
 
 cluster.name: sre-microservice
 http.port: 9200
-network.host: localhost
+network.host: 0.0.0.0
 path.data: /var/lib/elasticsearch
 path.logs: /var/log/elasticsearch
 #http.host: 0.0.0.0

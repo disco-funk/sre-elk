@@ -1,0 +1,43 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: sre-elk-logstash
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        name: sre-elk-logstash
+    spec:
+      containers:
+      - image: 870594606895.dkr.ecr.eu-west-2.amazonaws.com/sre-logstash
+        name: sre-elk-logstash
+        ports:
+        - containerPort: 5601
+        resources: {}
+        volumeMounts:
+                - name: varlog
+                  mountPath: /var/log
+                - name: varlibdockercontainers
+                  mountPath: /var/lib/docker/containers
+                  readOnly: true
+                - name: log-store
+                  mountPath: /log
+                  readOnly: true
+      restartPolicy: Always
+      volumes:
+            - name: varlog
+              hostPath:
+                path: /var/log
+            - name: varlibdockercontainers
+              hostPath:
+                path: /var/lib/docker/containers
+            - name: log-store
+              awsElasticBlockStore:
+                volumeID: vol-0a4f5bf9f76ff284e
+                fsType: ext4
+---

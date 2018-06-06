@@ -1,0 +1,15 @@
+2018-06-06 10:12:28.624  INFO 72420 --- [Test worker] c.z.sre.sremicroservice.EndpointsTest    : Starting EndpointsTest on Natalias-MacBook-Pro.local with PID 72420 (started by naos in /Users/naos/Projects/training/sre-microservice)
+2018-06-06 10:12:28.626 DEBUG 72420 --- [Test worker] c.z.sre.sremicroservice.EndpointsTest    : Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 10:12:28.628  INFO 72420 --- [Test worker] c.z.sre.sremicroservice.EndpointsTest    : No active profile set, falling back to default profiles: default
+2018-06-06 10:12:28.644  INFO 72420 --- [Test worker] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d2bd79a: startup date [Wed Jun 06 10:12:28 CEST 2018]; root of context hierarchy
+2018-06-06 10:12:29.594  INFO 72420 --- [Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2018-06-06 10:12:29.618  INFO 72420 --- [Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-06 10:12:29.618  INFO 72420 --- [Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-06 10:12:29.629  INFO 72420 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/naos/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-06-06 10:12:29.704  INFO 72420 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-06 10:12:29.705  INFO 72420 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1061 ms
+2018-06-06 10:12:29.835  INFO 72420 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-06 10:12:29.838  INFO 72420 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 10:12:29.839  INFO 72420 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 10:12:29.839  INFO 72420 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 10:12:29.839  INFO 72420 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
