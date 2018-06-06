@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   name: sre-elk-elasticsearch
 spec:
-  replicas: 1
+  replicas: {{.Values.replicaCount}}
   strategy: {}
   template:
     metadata:

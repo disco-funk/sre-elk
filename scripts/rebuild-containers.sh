@@ -6,4 +6,3 @@ docker image build containers/logstash --tag ls
 docker image build containers/kibana --tag ki
 docker image ls -a
 docker container ls -a
-
